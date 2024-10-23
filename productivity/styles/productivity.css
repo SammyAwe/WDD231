@@ -1,0 +1,166 @@
+/* Global Styles */ 
+* {
+     margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #000000; 
+    color: #FFFFFF; 
+    display: grid; 
+    grid-template-rows: auto 1fr auto; 
+    height: 100vh; 
+} /* Header */ 
+header {
+     background-color: #FF6F00; 
+     padding: 20px; 
+     text-align: center; 
+     font-size: 2rem; 
+     color: #FFFFFF; 
+    } /* Side Navigation */ 
+    .side-nav { 
+        background-color: #1E1E1E; 
+        padding: 20px; 
+        width: 250px; 
+        height: 100%; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        overflow-y: auto; 
+    } 
+    .side-nav ul { 
+        list-style-type: none; 
+    } 
+    .side-nav a { 
+        display: block; 
+        padding: 10px; 
+        margin: 5px 0; 
+        text-decoration: none; 
+        color: #FFFFFF; 
+        background-color: #333333; 
+        border-radius: 5px; 
+        text-align: center; 
+    } 
+    .side-nav a:hover { 
+        background-color: #FF6F00; 
+    } /* Main Content Area */ 
+    main { 
+        margin-left: 270px; 
+        padding: 20px; 
+        display: grid; 
+        grid-template-columns: 2fr 1fr; 
+        gap: 20px; 
+    } /* Dashboard Section */ 
+    .dashboard { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    } 
+    .chart { 
+        background-color: #1E1E1E; 
+        padding: 20px; 
+        border-radius: 10px; 
+    } 
+    .tasks-goals { 
+        display: flex; 
+        justify-content: space-between; 
+        gap: 20px; 
+    } /* Tasks and Goals Widgets */ 
+    .task-widget, .goal-widget { 
+        background-color: #1E1E1E; 
+        padding: 20px; 
+        border-radius: 10px; 
+        width: 48%; 
+    } 
+    .task-widget h2, .goal-widget h2 { 
+        margin-bottom: 10px; 
+    } 
+    .task-widget form, .goal-widget form { 
+        display: flex; 
+        gap: 10px; 
+        margin-bottom: 15px; 
+    } 
+    .task-widget input, .goal-widget input { 
+        flex: 1; 
+        padding: 10px; 
+        border-radius: 5px; 
+        border: none; 
+    } 
+    button { 
+        padding: 10px; 
+        background-color: #FF6F00; 
+        color: #FFFFFF; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+    } 
+    button:hover { 
+        background-color: #D35400; 
+    } 
+    ul { 
+        list-style-type: none; 
+        padding: 0; 
+    } 
+    li { 
+        margin: 5px 0; 
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+    } /* Progress Circle for Completed Tasks */ 
+    .completed-tasks { 
+        background-color: #1E1E1E; 
+        padding: 20px; 
+        border-radius: 10px; 
+        text-align: center; 
+    } 
+    .progress-circle { 
+        width: 150px; 
+        height: 150px; 
+        margin: 0 auto; 
+        border-radius: 50%; 
+        background: conic-gradient(#1abc9c 0%, #ecf0f1 0%); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 1.5rem; 
+        color: #FFFFFF; 
+    }
+    .extra-widgets {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    } 
+    #weather, #quote {
+        background-color: #1E1E1E;
+        padding: 20px;
+        border-radius: 10px;
+        width: 48%;
+        text-align: center;
+    }
+    footer { 
+        grid-row: 3; 
+        background-color: #FF6F00; 
+        text-align: center; 
+        padding: 10px; 
+        color: #FFFFFF; 
+    }
+     
+
+     @media (max-width: 768px) { 
+        main { 
+            margin-left: 0; 
+            grid-template-columns: 1fr; 
+        } 
+        .tasks-goals { 
+            flex-direction: column; 
+        } 
+        .side-nav { 
+            width: 100%; 
+            height: auto; 
+            position: relative; 
+        } 
+        #weather, #quote {
+            width: 100%;
+        }
+    }

@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Daily Productivity Tracker</title> 
+    <link rel="stylesheet" href="styles/productivity.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://apis.google.com/js/api.js"></script>
+</head> 
+<body> 
+    <header> 
+        <h1>Daily Productivity Tracker</h1> 
+    </header> 
+    <nav class="side-nav"> 
+        <ul> 
+            <li><a href="#">Tasks</a></li> 
+            <li><a href="#">Goals</a></li> 
+            <li><a href="#">Completed</a></li> 
+            <li><a href="awesamuelopeoluwa@gmail.com">Contact</a></li> 
+        </ul> 
+    </nav> 
+    <main> 
+        <section class="dashboard"> 
+            <div class="chart"> 
+                <canvas id="productivityChart"></canvas> 
+            </div>          
+            <div class="tasks-goals"> 
+                <div class="task-widget"> 
+                    <h2>Today's Tasks</h2> 
+                    <form id="taskForm">
+                        <input type="text" id="taskInput" placeholder="Enter a new task" required>
+                        <button type="submit">Add Task</button>
+                    </form>
+                    <ul id="taskList"></ul>
+                </div> 
+                <div class="goal-widget"> 
+                    <h2>Goals Progress</h2> 
+                    <form id="goalForm">
+                        <input type="text" id="goalInput" placeholder="Enter goal" required>
+                        <input type="number" id="goalTarget" placeholder="Target tasks" required min="1">
+                        <button type="submit">Set Goal</button>
+                    </form>
+                    <canvas id="goalsChart"></canvas> 
+                </div> 
+            </div> 
+            <div class="completed-tasks"> 
+                <h2>Tasks Completed</h2> 
+                <div class="progress-circle" id="tasksProgress"></div> 
+            </div> 
+        </section>
+        <div id="weather"></div>
+        <div id="quote"></div>
+        <div>
+            <button id="authorizeButton">Authorize Google Calender</button>
+            <button id="signOutButton">Sign Out</button>
+        </div>
+    </main> 
+    <footer> 
+        <p>&copy; 2024 Daily Productivity Tracker</p> 
+    </footer> 
+    <script src="scripts/productivity.js"></script> 
+</body> 
+</html>
