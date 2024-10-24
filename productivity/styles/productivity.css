@@ -3,7 +3,7 @@ body {
     margin: 0; 
     font-family: 'Roboto', sans-serif; 
     background-color: #ffffff; 
-    color: #000000; 
+    color: #333333; 
 } 
 h1, h2 { 
     font-family: 'Poppins', sans-serif; 
@@ -13,18 +13,22 @@ header {
     justify-content: space-between; 
     align-items: center; 
     padding: 20px; 
-    background-color: #FF6F00;
-    color: #000000; 
+    background-color: #f9f9f9;
+    color: #ff6f00; 
+    border-bottom: 2px solid white;
 } 
 body.dark-mode {
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 header.dark-mode {
-    background-color: #333333;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #333333;
+    color: white;
 }
 button.dark-mode {
-    background-color: #555555;
+    background-color: #ff6f00;
+    color: #333333;
 }
 button.dark-mode:hover {
     background-color: #777777;
