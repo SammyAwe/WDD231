@@ -2,62 +2,87 @@
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Daily Productivity Tracker</title> 
-    <link rel="stylesheet" href="styles/productivity.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-    <script src="https://apis.google.com/js/api.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily Productivity Tracker">
+    <meta name="author" content="Awe Samuel Opeoluwa"> 
+    <title>Daily Productivity Tracker</title>
+    <link rel="icon" href="favicon.ico"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/productivity.css">
+    <meta property="og:title" content="Be productive, manage your tasks!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/thumbnail.png"> 
 </head> 
-<body> 
+<body class="dark-mode"> 
     <header> 
+        <a href="index.html" style="text-decoration: none; color: inherit;">
         <h1>Daily Productivity Tracker</h1> 
+        </a>
+        <button id="mode-toggle">Switch to Light Mode</button> 
     </header> 
-    <nav class="side-nav"> 
-        <ul> 
-            <li><a href="#">Tasks</a></li> 
-            <li><a href="#">Goals</a></li> 
-            <li><a href="#">Completed</a></li> 
-            <li><a href="awesamuelopeoluwa@gmail.com">Contact</a></li> 
-        </ul> 
-    </nav> 
-    <main> 
-        <section class="dashboard"> 
-            <div class="chart"> 
-                <canvas id="productivityChart"></canvas> 
-            </div>          
-            <div class="tasks-goals"> 
-                <div class="task-widget"> 
-                    <h2>Today's Tasks</h2> 
-                    <form id="taskForm">
-                        <input type="text" id="taskInput" placeholder="Enter a new task" required>
-                        <button type="submit">Add Task</button>
-                    </form>
-                    <ul id="taskList"></ul>
-                </div> 
-                <div class="goal-widget"> 
-                    <h2>Goals Progress</h2> 
-                    <form id="goalForm">
-                        <input type="text" id="goalInput" placeholder="Enter goal" required>
-                        <input type="number" id="goalTarget" placeholder="Target tasks" required min="1">
-                        <button type="submit">Set Goal</button>
-                    </form>
-                    <canvas id="goalsChart"></canvas> 
-                </div> 
+    <main>   
+         <section class="hero">
+            <div class="hero-content">
+                <img src="images/heroimage.jpg" alt="Boost Productivity" class="hero-img" />
+                <h1>Boost Your Productivity</h1>
+                <p>Track your tasks, set goals, and visualize your productivity trends effortlessly.</p>
+            </div>
+         </section>   
+        <section class="section tasks"> 
+            <div class="task-input"> 
+                <h2>Add New Task</h2> 
+                <form id="taskForm"> 
+                    <input type="text" id="taskName" placeholder="Enter your task..." required> 
+                    <select id="taskCategory"> 
+                        <option value="work">Work</option> 
+                        <option value="personal">Personal</option> 
+                        <option value="goal">Goal</option> 
+                    </select> 
+                    <button type="submit">Add Task</button> 
+                </form> 
             </div> 
-            <div class="completed-tasks"> 
-                <h2>Tasks Completed</h2> 
-                <div class="progress-circle" id="tasksProgress"></div> 
+            <div class="task-display"> 
+                <h2>Today's Tasks</h2> 
+                <ul id="taskList"></ul> 
             </div> 
         </section>
-        <div id="weather"></div>
-        <div id="quote"></div>
-        <div>
-            <button id="authorizeButton">Authorize Google Calender</button>
-            <button id="signOutButton">Sign Out</button>
+        <div id="current-day">
+            <h2>Current Day</h2>
+            <p></p>
         </div>
+        <div id="time-section">
+            <h2>Current Time & Date</h2>
+            <p id="local-time"></p>
+        </div> 
+        <div id="week-number">
+            <h2>Week Of The Year</h2>
+            <p></p>
+        </div> 
+        <div id="days-left">
+            <h2>Days Left In The Year</h2>
+            <p></p>
+        </div>
+        <div id="season">
+            <h2>Current Season</h2>
+            <p></p>
+        </div>
+        <section class="section video-reflection"> 
+            <h2>Stay Motivated And Productive!</h2> 
+            <video controls> 
+                <source src="images/video reflection.mp4" type="video/mp4">  
+            </video> 
+            <video controls>
+                <source src="images/videoreflection2.webm" type="video/mp4">
+            </video>
+        </section> 
     </main> 
     <footer> 
         <p>&copy; 2024 Daily Productivity Tracker</p> 
+        <div class="social-links"> 
+            <a href="https://facebook.com/share/unms6W5Sf74pJdcm/?mibextid=LQQJ4d" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/TheSammyAwe" target="_blank">Twitter</a> | 
+            <a href="https://youtube.com/@dacosta2024?si=-H8xfzK86NKNYper" target="_blank">YouTube</a> 
+        </div> 
     </footer> 
     <script src="scripts/productivity.js"></script> 
 </body> 
