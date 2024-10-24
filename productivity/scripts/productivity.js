@@ -13,9 +13,15 @@ taskForm.addEventListener('submit', (e) => {
     }); 
 }); 
 const modeToggle = document.getElementById('mode-toggle'); 
-modeToggle.addEventListener('click', () => { 
-    document.body.classList.toggle('dark-mode'); 
-    modeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode'; }); 
+const body = document.body;
+const header = document.querySelector('header');
+modeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    header.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    modeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+});
+    
 function updateTime() {
     const now = new Date();
     const formattedTime = now.toLocaleString();

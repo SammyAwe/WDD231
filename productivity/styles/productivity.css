@@ -2,8 +2,8 @@
 body { 
     margin: 0; 
     font-family: 'Roboto', sans-serif; 
-    background-color: #000000; 
-    color: #FFFFFF; 
+    background-color: #ffffff; 
+    color: #000000; 
 } 
 h1, h2 { 
     font-family: 'Poppins', sans-serif; 
@@ -13,8 +13,22 @@ header {
     justify-content: space-between; 
     align-items: center; 
     padding: 20px; 
-    background-color: #FF6F00; 
+    background-color: #FF6F00;
+    color: #000000; 
 } 
+body.dark-mode {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+header.dark-mode {
+    background-color: #333333;
+}
+button.dark-mode {
+    background-color: #555555;
+}
+button.dark-mode:hover {
+    background-color: #777777;
+}
 main { 
     display: flex; 
     flex-direction: column; 
